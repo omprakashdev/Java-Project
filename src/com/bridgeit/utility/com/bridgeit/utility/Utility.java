@@ -9,9 +9,16 @@
  ******************************************************************************/
 package com.bridgeit.utility;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Utility {
+
+	public class utility {
+
+	}
+
+
 
 	/**
 	 * Purpose: This method is used to add 2 integers
@@ -147,7 +154,79 @@ public int SpringS(int day,int month)
 	}
 		return 0;
 	}
-}
+//program quadratic
+public int Quad(int delta,int root1,int root2)
+	{
+		int num1=0,num2 = 0,num3=0;
+	delta=num2*num2-4*num1*num3;
+	root1=(int) ((-num2+Math.sqrt(delta))/(2*num1));
+	root2=(int)((-num2-Math.sqrt(delta))/(2*num1));
+			
+	return 0;
+		
+
+	}
+//Distance program
+	
+	public static int distance(int sour, int des) {
+		int dist=0;
+		return dist = (int) Math.sqrt(sour*sour+des*des);
+	}
+
+
+//Generate Random number and print sum of the number.
+public static int random(int RandomNumber1,int RandomNumber2)
+	{
+	int SumOfRandomNumber=RandomNumber1+RandomNumber2;
+	return SumOfRandomNumber;
+	
+	}
+//Question Number=8//Generate random print Maximum and minimum number 
+public static int RanNum(int RandomNumber1,int RandomNumber2,int SumOfRandomNumber)
+	{	
+		Random random=new Random();
+		RandomNumber1=random.nextInt(6);
+		RandomNumber2=random.nextInt(6);
+		System.out.println(RandomNumber1);
+		System.out.println(RandomNumber2);;
+		if(RandomNumber1<RandomNumber2)
+		{
+			System.out.println("Maximum Number is= "+(int)Math.max(RandomNumber2, RandomNumber1));
+		}
+		else
+			System.out.println("Number is Equal or Less than Input");
+		
+		
+		SumOfRandomNumber=RandomNumber1+RandomNumber2;
+		
+		return SumOfRandomNumber;
+	}
+//Question Number=9//Wind chill temperature using formula
+	
+	public static double WinChill(double v, double t) 
+		{
+			double w;
+			w=37.74+0.6215*t+(0.4275*t+35.7)*(double)Math.pow(v, 0.16);
+			return w;
+		}
 
 	
+
+//Question Number=10 day of week
+
+public static int DOW (int day, int month, int year) 
+	{
+		int year1,month1,x,day1=0;
+		year1 = year-(14-month)/12;
+		x = year1+year1/4-year1/100 + year1/400;
+		month1 = month + 12*((14-month) / 12)-2;
+		return day1=(day +x+31*month1/12)%7;
+		
+		
+	}
+	
+	
+
+
+}
 
